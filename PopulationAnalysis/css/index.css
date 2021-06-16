@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+@font-face {
+  font-family: DS-Digital;
+  src: url(../font/DS-Digital.TTF);
+}
+body {
+  background-color: yellowgreen;
+}
+.header {
+  position: relative;
+  height: 1rem;
+  background-color: #060c30;
+  text-align: center;
+  color: white;
+  font-size: 0.3rem;
+}
+.divleft {
+  float: left;
+  width: 100px;
+  border: 1px solid #060;
+}
+.divright {
+  float: right;
+  width: 280px;
+  border: 1px solid #00F;
+}
+.urbananalysis {
+  display: flex;
+  height: 16rem;
+  background-color: #23275a;
+  font-size: 0.35rem;
+  color: white;
+  text-align: center;
+}
+.urbananalysis .column {
+  flex: 3;
+}
+.urbananalysis .column:nth-child(1) {
+  flex: 5;
+}

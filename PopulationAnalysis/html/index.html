@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Analysis</title>
+
+    <link rel="stylesheet" href="../css/analysis.css">
+
+    <!-- <script src="echarts.js"></script>
+    <script src="../js/flexible.js"></script> -->
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/china.js"></script>
+
+    
+</head>
+<body>
+    <div id="title" style="background:#313131;position: absolute; left:0%; width:100%; top: 0%; height: 10%;">
+        <h1 style="text-align: center;color:white;">第七次人口普查数据可视化</h1>
+    </div>
+
+    <!--人口增长与区域分布分析-->
+    <div id="distributionanalysis" style="background:#313131;position: absolute; left:0%; width:100%; top: 10%; height: 90%;">
+        <div class="divleft" style="position: absolute; left:0%; width:50%; top: 0%; height: 100%;">
+            <div id="growth" style="position: absolute; left:10%; width:90%; top: 15%; height: 80%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("growth");
+                var myChart_growth = echarts.init(dom,'dark');
+            </script>
+        </div>
+
+        <div class="divright" style="position: absolute; left:50%; width:50%; top: 0%; height: 100%;">
+            <div id="distribution" style="position: absolute; left:5%; width:90%; top: 5%; height: 90%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("distribution");
+                var myChart1 = echarts.init(dom,'dark');
+            </script>
+        </div>
+
+    </div>
+
+    <!--城镇化与流动人口分析-->
+    <div id="urbananalysis" style="background:#313131;position: absolute; left:0%; width:100%; top: 100%; height: 100%;">
+        <!-- left -->
+        <div class="divleft" style="position: absolute; left:0%; width:50%; top: 15%; height: 70%;">
+            <div id="UrbanizationRate" style="position: absolute; left:10%; width:80%; top: 5%; height: 90%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("UrbanizationRate");
+                var myChart_urban = echarts.init(dom,'dark');
+            </script>
+        </div>
+        <!-- right -->
+        <div class="divright" style="position: absolute; left:50%; width:50%; top: 15%; height: 70%;">
+            <div id="movement" style="position: absolute; left:10%; width:80%; top: 10%; height: 90%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("movement");
+                var myChart_movement = echarts.init(dom,'dark');
+            </script>
+        </div>
+    </div>
+
+    <!--男女比与受教育程度分析-->
+    <div id="educationanalysis" style="background:#313131;position: absolute; left:0%; width:100%; top: 200%; height: 100%;">
+        <div class="divleft" style="position: absolute; left:0%; width:50%; top: 0%; height: 100%;">
+            <div id="gender" style="position: absolute; left:5%; width:90%; top: 5%; height: 90%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("gender");
+                var myChart2 = echarts.init(dom,'dark');
+            </script>
+        </div>
+
+        <div class="divright" style="position: absolute; left:50%; width:50%; top: 0%; height: 100%;">
+            <div id="education" style="position: absolute; left:5%; width:90%; top: 5%; height: 90%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("education");
+                var myChart7 = echarts.init(dom,'dark');
+            </script>
+        </div>
+    </div>
+
+    <!--区域人口年龄结构分析-->
+    <div id="ageanalysis" style="background:#313131;position: absolute; left:0%; width:100%; top: 300%; height: 100%;">
+        <div class="divleftup" style="position: absolute; left:0%; width:50%; top: 0%; height: 50%;">
+            <!--0~14岁人口-->
+            <div id="age0_14" style="position: absolute; left:5%; width:90%; top: 2%; height: 96%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("age0_14");
+                var myChart3 = echarts.init(dom,'dark');
+            </script>
+        </div>
+        <div class="divrightup" style="position: absolute; left:50%; width:50%; top: 0%; height: 50%;">
+            <!--15~59岁人口-->
+            <div id="age15_59" style="position: absolute; left:5%; width:90%; top: 2%; height: 96%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("age15_59");
+                var myChart4 = echarts.init(dom,'dark');
+            </script>
+        </div>
+        <div class="divleftdown" style="position: absolute; left:0%; width:50%; top: 50%; height: 50%;">
+            <!--60岁以上人口-->
+            <div id="ageover_60" style="position: absolute; left:5%; width:90%; top: 2%; height: 96%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("ageover_60");
+                var myChart5 = echarts.init(dom,'dark');
+            </script>
+        </div>
+        <div class="divrightdown" style="position: absolute; left:50%; width:50%; top: 50%; height: 50%;">
+            <!--65岁以上人口-->
+            <div id="ageover_65" style="position: absolute; left:5%; width:90%; top: 2%; height: 96%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("ageover_65");
+                var myChart6 = echarts.init(dom,'dark');
+            </script>
+        </div>
+    </div>
+    
+    <!--民族构成分析-->
+    <div id="peopleanalysis" style="background:#313131;position: absolute; left:0%; width:100%; top: 400%; height: 100%;">
+        <div class="divleft" style="position: absolute; left:0%; width:50%; top: 0%; height: 100%;">
+            <div id="people" style="position: absolute; left:5%; width:90%; top: 20%; height: 60%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("people");
+                var myChart_people = echarts.init(dom,'dark');
+            </script>
+        </div>
+
+        <div class="divright" style="position: absolute; left:50%; width:50%; top: 0%; height: 100%;">
+            <div id="minority" style="position: absolute; left:5%; width:90%; top: 2%; height: 96%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("minority");
+                var myChart_minority = echarts.init(dom,'dark');
+            </script>
+        </div>
+    </div>
+
+    <!--港澳台及外籍人口来内地/来华分析-->
+    <div id="outsideanalysis" style="background:#313131;position: absolute; left:0%; width:100%; top: 500%; height: 100%;">
+        <div class="divleft" style="position: absolute; left:0%; width:50%; top: 0%; height: 100%;">
+            <div id="outsidefrom" style="position: absolute; left:15%; width:90%; top: 15%; height: 65%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("outsidefrom");
+                var myChart_outsidefrom = echarts.init(dom,'dark');
+            </script>
+        </div>
+        
+        <div class="divright" style="position: absolute; left:50%; width:50%; top: 0%; height: 100%;">
+            <div id="outsidefor" style="position: absolute; left:5%; width:90%; top: 10%; height: 80%;"></div>
+            <script type="text/javascript">
+                var dom = document.getElementById("outsidefor");
+                var myChart_outsidefor = echarts.init(dom,'dark');
+            </script>
+        </div>
+        
+    </div>
+
+
+    <!-- <div class="panel line">
+        <h2>chart 03</h2>
+        <div class="chart"></div>
+    </div> -->
+
+    <!-- <div class="map">
+        <div id="distribution" style="width:900px;height:800px"></div>
+        <script type="text/javascript">         
+            // 基于准备好的dom，初始化echarts实例
+            var dom = document.getElementById('distribution');
+            var myChart = echarts.init(dom);
+        </script>
+    </div> -->
+    
+    <script src="../js/index.js"></script>
+</body>
+</html>
